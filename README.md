@@ -1,4 +1,5 @@
 # 🤖 Agentic RAG Chatbot using LangChain
+An AI agent that combines **RAG, web search, and tools** to answer questions using **LangChain, FastAPI, and Streamlit**.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Agent-orange)
@@ -23,6 +24,13 @@ It supports:
 * API-based access
 
 ---
+# Why This Project
+
+Large Language Models often hallucinate when answering questions.
+
+This project demonstrates how **Retrieval Augmented Generation (RAG)** combined with **tool-based agents** can improve reliability by retrieving real knowledge from documents and external tools.
+
+---
 
 # Project Overview
 
@@ -45,7 +53,18 @@ Example capabilities:
 * Provide conversational responses
 
 ---
+# RAG Pipeline
 
+The Retrieval-Augmented Generation pipeline works in the following steps:
+
+1. Load PDF documents
+2. Split text into smaller chunks
+3. Generate embeddings using Sentence Transformers
+4. Store embeddings in a FAISS vector database
+5. Retrieve relevant chunks based on user query
+6. Pass context to the LLM for answer generation
+
+---
 # Demo
 
 ### Streamlit Chat Interface
@@ -137,13 +156,18 @@ agentic-rag-chatbot
 │   ├── api
 │   │   └── api.py
 │   │
+│   ├── rag
+│   │   ├── ingest.py
+│   │   ├── rag_pipeline.py
+│   │   └── prompt_template.py
+│   │
 │   ├── tools
 │   │   ├── web_search_tool.py
 │   │   ├── search_tool.py
 │   │   ├── calculator_tool.py
 │   │   └── rag_tool.py
 │   │
-│   ├── UI
+│   ├── ui
 │   │   └── streamlit_app.py
 │   │
 │   └── images
@@ -208,7 +232,7 @@ http://127.0.0.1:8000/docs
 ### Run Streamlit UI
 
 ```
-streamlit run app/UI/streamlit_app.py
+streamlit run app/ui/streamlit_app.py
 ```
 
 Open browser
@@ -256,9 +280,12 @@ Who is the current president of India?
 
 # Author
 
-Vedant
+**Vedant Shinde**
 
-Machine Learning & AI Enthusiast
+Machine Learning & Generative AI Enthusiast
+
+GitHub  
+https://github.com/Flash6699
 
 ---
 
