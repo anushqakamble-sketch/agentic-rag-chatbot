@@ -187,7 +187,7 @@ agentic-rag-chatbot
 Clone the repository
 
 ```
-git clone https://github.com/Flash6699/agentic-rag-chatbot.git
+git clone https://github.com/vedant-aiml/agentic-rag-chatbot
 cd agentic-rag-chatbot
 ```
 
@@ -285,7 +285,7 @@ Who is the current president of India?
 Machine Learning & Generative AI Enthusiast
 
 GitHub  
-https://github.com/Flash6699
+https://github.com/vedant-aiml
 
 ---
 
